@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>JavaScript Events</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link rel="stylesheet" href="styles.css">
+<script src="myscript.js"></script>
+</head>
+<body onload="mymessage()">
+<script>
+
+
+
+
+</script>
+<header>
+<div class="container">
+<div class="col-xs-12">
+<div class="col-xs-8">
+<h1 onclick="this.innerHTML='YAY JAVASCRIPT'">JavaScript Events (Click Me!)</h1>
+</div>
+<div class="col-xs-4 pull-right" id="date">
+<h2>Would you like to know what time it is?</h2>
+<button type="button" onclick="document.getElementById('time').innerHTML=Date()"> Display Time & Date
+</button>
+<p id="time"></p>
+</div>
+
+</div>
+</div>
+</header>
+<div class="content">
+<div class="container">
+<div class="col-xs-6 changingtxt">
+<div onmouseover="mOver(this)" onmouseout="mOut(this)"
+style="background-color:coral; width:100%;margin-top:5%;height:100px;text-align:center;padding-top:7%;font-weight:bold;font-size:24px;">Mouse Over Me!</div>
+
+Enter text: <input type="text" id="uppertext" onblur="myFunction()">
+<p>When you leave this input field, the text will transform to upper case.</p>
+
+<h1 ondblclick="doubleClick()">Double-click me!</h1>
+<h1 id="doubleclick"></h1>
+
+
+<p>Try the scrollbar!</p>
+<div onscroll="parScroll()" style="height:100px;overflow:scroll;"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pulvinar elit ac libero convallis condimentum. Pellentesque vitae dolor id dolor rhoncus sodales. Aenean ac dui eu velit efficitur pellentesque id at lacus. Donec dignissim fermentum orci. Etiam et nisl ipsum. Ut lorem ipsum, eleifend sed leo suscipit, tempor tincidunt nunc. Duis varius consequat sapien eu facilisis. Proin in tincidunt velit, sed tristique lectus.</p>
+
+<p>Proin maximus porta justo, at dictum elit porttitor sed. Sed at enim metus. Donec mattis condimentum felis, in placerat nibh cursus sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sollicitudin sodales ligula, a molestie tortor euismod sit amet. Pellentesque sed lacus eu leo egestas egestas at non augue. Suspendisse vel sem ultricies, fermentum lacus quis, facilisis sem. Etiam rhoncus urna sed posuere aliquam.</p>
+</div>
+
+<p>Scrolled <span id="scrolled">0</span> times.</p>
+</div>
+
+<div class="col-xs-6 colorchange">
+<h3>Text Color Change</h3>
+<p>Click on the paragraph to change the color</p>
+<p id="Pcolor" onmouseDown="mouseDown(this)" onmouseUp="mouseUp(this)">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac eleifend neque. Aliquam ac ante ultricies, ornare erat in, euismod sem. Praesent aliquet nunc vitae enim malesuada congue. Morbi varius, elit quis posuere lacinia, enim lacus faucibus risus, nec tristique lorem nibh lacinia nunc. Morbi enim ante, fringilla nec nunc id, lacinia imperdiet orci. Sed rutrum molestie mauris non dapibus. In commodo est vitae posuere varius. Morbi a dui sollicitudin, iaculis tellus a, sodales urna. Aliquam dolor nunc, tincidunt sodales diam ac, consequat suscipit lacus. Suspendisse ultrices magna eu orci faucibus, at posuere sapien semper. Sed non dapibus ipsum. In faucibus quam eu lectus tristique, at consequat ante eleifend. Integer elit eros, pretium ut velit a, ornare posuere odio. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+
+</div>
+</div>
+</div>
+
+<script>
+
+var x = 0;
+function parScroll(){
+	document.getElementById("scrolled").innerHTML = x += 1;
+}
+
+</script>
+
+<script>
+
+function doubleClick(){
+	document.getElementById("doubleclick").innerHTML = "Hello!";
+}
+
+</script>
+
+<script>
+function myFunction(){
+	var x = document.getElementById("uppertext");
+	x.value = x.value.toUpperCase();
+}
+
+</script>
+
+<script>
+function mymessage() {
+    alert("I HOPE YOU LIKE CORAL!");
+}
+</script>
+
+<script>
+function mOver(obj){
+	obj.innerHTML = "I change!"
+}
+
+function mOut(obj){
+	obj.innerHTML = "I change back!"
+}
+</script>
+<script>
+function mouseDown(){
+	document.getElementById("Pcolor").style.color="coral";
+}
+
+function mouseUp(){
+	document.getElementById("Pcolor").style.color="gray";
+}
+</script>
+
+
+</body>
+</html>

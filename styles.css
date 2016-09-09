@@ -1,0 +1,16 @@
+
+header{background-color:coral;}
+#date{text-align:center;}
+#date > button, input, select, textarea{font-size:10px;
+										width:100%;}
+
+#date h2{font-size:12px;
+		  padding-bottom:0;}
+
+h1{text-align:center;}
+
+
+
+
+
+#doubleclick{color:coral;}
